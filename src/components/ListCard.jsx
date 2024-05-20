@@ -6,6 +6,7 @@ import { Box, Button } from '@mui/material'
 ;
 import { useState } from 'react';
 import { useStoreState } from 'easy-peasy';
+import { fontSize } from '@mui/system';
 
 const ListCard = () => {
   const { data, loading, error } = useStoreState(state => state.words);
@@ -61,7 +62,9 @@ console.log(data);
        }}>Prev</Button>
      </Stack>
      </Box>
-   </Stack> : ""
+   </Stack> : <p style={{fontSize: "10rem"}}>
+   Select Level Please
+   </p>
   );
 };
 
